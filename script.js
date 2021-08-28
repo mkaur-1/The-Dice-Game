@@ -1,22 +1,22 @@
 var hasil = document.querySelector('.hasil');
 var button = document.querySelector('button');
-var dadu1 = document.querySelectorAll('img')[0];
-var dadu2 = document.querySelectorAll('img')[1];
+var Player1 = document.querySelectorAll('img')[0];
+var Player2 = document.querySelectorAll('img')[1];
 
-//event saat tombol ditekan
+
 button.addEventListener('click', function () {
     //angka random 1 - 6
-    var randomDadu1 = Math.floor((Math.random() * 6) + 1);
-    var randomDadu2 = Math.floor((Math.random() * 6) + 1);
+    var randomPlayer1 = Math.floor((Math.random() * 6) + 1);
+    var randomPlayer2 = Math.floor((Math.random() * 6) + 1);
 
-    dadu1.setAttribute('src', 'images/dice' + randomDadu1 + '.png');
-    dadu2.setAttribute('src', 'images/dice' + randomDadu2 + '.png');
+    Player1.setAttribute('src', 'images/dice' + randomPlayer1 + '.png');
+    Player2.setAttribute('src', 'images/dice' + randomPlayer2 + '.png');
 
-    if (randomDadu1 > randomDadu2) {
-        hasil.innerHTML = '🏴  Player 1 Menang';
-    } else if (randomDadu1 < randomDadu2) {
-        hasil.innerHTML = 'Player 2 Menang 🏴 ';
+    if (randomPlayer1 > randomPlayer2) {
+        hasil.innerHTML = '🏴  Player 1';
+    } else if (randomPlayer1 < randomPlayer2) {
+        hasil.innerHTML = 'Player 2  🏴 ';
     } else {
-        hasil.innerHTML = '🚩 Seri !! 🚩';
+        hasil.innerHTML = '🚩 STOP!! 🚩';
     }
 });
