@@ -1,4 +1,4 @@
-var hasil = document.querySelector('.hasil');
+var start = document.querySelector('.start');
 var button = document.querySelector('button');
 var Player1 = document.querySelectorAll('img')[0];
 var Player2 = document.querySelectorAll('img')[1];
